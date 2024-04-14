@@ -1,4 +1,4 @@
-@font-face {
+@use '../../node_modules/rfs/sass' {}@font-face {
   font-family: 'FuturaMedium';
   src: url(../assets/fonts/Futura-Medium.otf);
 }
