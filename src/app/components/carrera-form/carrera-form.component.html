@@ -3,7 +3,7 @@
     <div class="mt-3">
       <div class="container-bg">
         <div class="row">
-          <div class="col-sm-4 col-md-5 col-xl-4 mb-4 mt-4">
+          <div class="col-sm-4 col-md-5 col-xl-4 mb-4">
             <div class="container-title d-flex">
                 <img src="../../../../assets/semcorRun.png" class="heart-img">
                 <img style="width: 47px" src="../../../../assets/heartSemcor.png" >
@@ -19,7 +19,7 @@
           </div>
           <div class="col-sm-6 col-md-4 col-xl-4">
             <div class="container-register">
-              <h4>Registrate ahora!</h4>
+              <p>Registrate ahora!</p>
             </div>
           </div>
         </div>
@@ -29,26 +29,21 @@
 
   <div>
     <div class="row p-4">
-      <section class="col-12 container">
+      <section class="col-12 container-fluid">
         <h2 class="title-form info-title w-100  mt-3 mb-3">Detalles del evento</h2>
         <div class="row d-flex justify-content-center align-items-center container">
-          <div class="col-6">
-            <p class="text-start">Fecha</p>
+            <div class="col-sm-12 col-md-12 col-xl-12 d-flex justify-content-between">
+              <p class="text-start" >Fecha</p>
+              <p class="text-end">30 de mayo 2024.</p>
+
+            </div>
+          <div class="col-sm-12 col-md-12 col-xl-12 d-flex justify-content-between">
+            <p class="text-start">Hora</p>
+            <p class="text-end"> 8:00 AM.</p>
           </div>
-          <div class="col-6  text-end ">
-            <p class="mt-3">30 de mayo 2024.</p>
-          </div>
-          <div class="col-6 text-start">
-            <p class="mt-3">Hora</p>
-          </div>
-          <div class="col-6 text-end">
-            <p class="mt-3"> 8:00 AM.</p>
-          </div>
-          <div class="col-6 text-start">
-            <p class="mt-3">Ubicación</p>
-          </div>
-          <div class="col-6  text-end">
-              <p class="mt-3">En el llano ñero.</p>
+          <div class="col-sm-12 col-md-12 col-xl-12 d-flex justify-content-between">
+            <p  class="text-start">Ubicación</p>
+            <p class="text-end">En el llano ñero.</p>
           </div>
         </div>
       </section>
@@ -69,7 +64,9 @@
             <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  Entrega de Material
+                  <span class="d-flex w-100">
+                    Entrega de Material
+                  </span>
                 </mat-panel-title>
                 <mat-panel-description>
                 </mat-panel-description>
@@ -107,8 +104,8 @@
           </mat-accordion>
         </div>
       </section>
-      <section class="col-12 container">
-        <div class="register-form p-5">
+      <section class="col-12 container mt-3">
+        <div class="register-form p-1">
           <div class="w-100 d-flex justify-content-center align-items-center">
             <h2 class="title-form text-center">Registrate ahora!</h2>
           </div>
@@ -192,7 +189,7 @@
             <div class="form-group">
               
               </div>
-              <input type="submit" value="Enviar" class="btn btn-info">
+              <!-- <input type="submit" value="Enviar" class="btn btn-info"> -->
           </form>
       </div>
       </section>

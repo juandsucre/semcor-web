@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/f630eefa-7e48-4b11-9b4f-6c2121f0cfaf/resourceGroups/semcorEU/providers/Microsoft.Web/sites/GrupoSemcor",
+    "appService.deploySubpath": ""
+}

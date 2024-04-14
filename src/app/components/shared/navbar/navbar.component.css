@@ -1,5 +1,5 @@
 nav {
-  background-color: #F5F5F5;
+  background-color: #FCF7FA !important;
   color: #fff;
   padding: 10px;
   border-bottom: 1.5px solid #920033;
@@ -16,7 +16,7 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin: 5px;
 }
 
@@ -26,13 +26,36 @@ nav ul li a {
   padding: 10px 15px;
   font-size: 14px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  position: relative;
 }
 
 nav ul li a:hover {
-  background-color: #2F3068;
-  color: #920033;
-  font-weight: 900;
+  font-weight: 600;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav-link::after {
+  content: '';
+  border-image-source: linear-gradient(to right, #2F3068, transparent);
+  border-bottom: 1.5px solid #2F3068;
+  border-image-slice: 1;
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  transition: 0.8s;
+  opacity: 0;
+}
+
+.nav-item.active .nav-link {
+  color: #2F3068;
+  font-weight: 700;
 }
 
 .logo {
