@@ -1,19 +1,30 @@
 .title
     h3
-        font-weight: 600
-        font-size: 30px
-        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1)
-        font-family: "Inter", sans-serif
         letter-spacing: .4px
         color: #2F3068
+        font-family: "Montserrat", Sans-serif
+        font-size: 45px
+        font-weight: 700
         span
             color:#920033
             font-style: italic
+    h5
+        color:#920033
+        font-family: "Montserrat", Sans-serif
+        text-align: center
+        font-weight: 500
+        margin-top: 20px
+
+
+.container-img
+    width: 100%
+    height: 750px
+    background-image: url(../../../assets/womandoc2.jpg)
+        
 .item-us
     border: 1.5px solid #d3d4f9
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
     border-radius: 5px
-    background: #FCF7FA
     padding-left: 30px !important
 
 .box-text
@@ -21,11 +32,15 @@
         font-family: "Inter", sans-serif
         font-weight: 600
         color: #2F3068
+        z-index: 3
+        position: relative
 
     p
         color: #920033
         font-weight: 400
+        position: relative
         font-family: "Manrope", sans-serif
+        z-index: 3
 
 .subtitle-run
     font-family: "Inter", sans-serif
@@ -37,7 +52,6 @@
     border: 1.5px solid #d3d4f9
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
     border-radius: 5px
-    background: #FCF7FA
 
 .run-text
     h4
@@ -59,6 +73,24 @@
 .col-button
         justify-content: end
 
+
+.semcor
+    img
+        width: 200px
+.title-semcor
+    letter-spacing: .4px
+    color: #FCF7FA
+    font-family: "Montserrat", Sans-serif
+    font-size: 50px
+    font-weight: 700
+
+.subtitle-semcor
+    font-family: "Montserrat", Sans-serif
+    color: #FCF7FA
+    letter-spacing: .4px
+    font-size: 25px
+
+
 @media (min-width: 320px) and (max-width: 480px) 
     .col-button
         justify-content: start
@@ -68,3 +100,44 @@
         font-size: 15px
     .btn-register
         font-size: 14px
+    .container-img
+        background-position: 50% 20% !important
+
+
+
+.item-services
+    height: 250px
+    border-radius: 4px
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+    position: relative
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url(../../../assets/laboratory.jpg)
+    border: .5px solid #920033
+    border-radius: 5px
+    .box-text
+        h6
+            color: #920033
+            font-size: 20px
+            font-family: "Montserrat", Sans-serif
+        p
+            color: #2F3068
+            font-weight: 600
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(255, 255, 255, 0.5)
+        z-index: 1
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 2
