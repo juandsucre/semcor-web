@@ -1,17 +1,43 @@
-.title h3 {
+.title .container-title-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title .container-title-img h1 {
+  letter-spacing: 2px;
+}
+
+.title .container-title-img h1 span {
+  color: #920033;
+}
+
+.title .container-title-img img {
+  width: 50%;
+  height: 100%;
+}
+
+.title h1 {
   letter-spacing: .4px;
+  text-transform: uppercase;
   color: #2F3068;
   font-family: "Montserrat", Sans-serif;
   font-size: 45px;
   font-weight: 700;
 }
 
-.title h3 span {
+.title h1 span {
   color: #920033;
-  font-style: italic;
 }
 
-.title h5 {
+.title .container-subtitle {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: ce;
+}
+
+.title .container-subtitle h3 {
   color: #920033;
   font-family: "Montserrat", Sans-serif;
   text-align: center;
@@ -27,22 +53,26 @@
 
 .item-us {
   border: 1.5px solid #d3d4f9;
+  background: #ededf9;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding-left: 30px !important;
+  border-radius: 45px 5px 45px 5px;
+  min-height: 350px;
+  padding: 20px !important;
 }
 
 .box-text h6 {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
-  color: #2F3068;
+  font-weight: 700;
+  color: #920033;
+  text-transform: uppercase;
   z-index: 3;
   position: relative;
 }
 
 .box-text p {
-  color: #920033;
+  color: #2F3068;
   font-weight: 400;
+  font-size: 18px;
   position: relative;
   font-family: "Manrope", sans-serif;
   z-index: 3;
@@ -55,10 +85,9 @@
 }
 
 .register-run {
-  padding: 30px;
-  border: 1.5px solid #d3d4f9;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-image: url(../../../assets/semcor-run/footRunner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .run-text h4 {
@@ -120,6 +149,46 @@
   .container-img {
     background-position: 50% 20% !important;
   }
+  .border-button {
+    width: 100% !important;
+  }
+  .container-month {
+    padding: 0 !important;
+  }
+  .text-important h2 {
+    width: 100%;
+  }
+  h1 span {
+    font-size: 1.5rem !important;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  h3 {
+    font-size: 1rem !important;
+  }
+  h4 {
+    font-size: 0.875rem !important;
+  }
+  h5 {
+    font-size: 0.75rem !important;
+  }
+  p {
+    font-size: 0.875rem !important;
+  }
+  span {
+    font-size: 0.875rem !important;
+  }
+  .item-us {
+    margin-top: 20px;
+    min-height: 300px;
+  }
+  .register-container img {
+    width: 200px !important;
+  }
 }
 
 .item-services {
@@ -164,4 +233,82 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+}
+
+.text-important h2 {
+  color: #920033;
+  letter-spacing: .4px;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 700;
+}
+
+.register-container img {
+  width: 300px;
+}
+
+.register-container h5 {
+  color: #920033;
+  font-size: 25px;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.register-container .border-button {
+  margin: 10px;
+  width: 50%;
+  padding: 5px;
+  border: 2px solid #920033;
+  border-radius: 30px;
+}
+
+.register-container .border-button button {
+  width: 100%;
+  background: #920033;
+  color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.container-month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.container-month h5 {
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Montserrat", Sans-serif;
+  width: 80%;
+}
+
+.container-month .month {
+  background: #920033;
+  letter-spacing: 10px;
+  font-weight: 400;
+}
+
+.container-month .heart-month {
+  background: #2F3068;
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.container-month span {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
+  color: #fff;
 }
