@@ -16,8 +16,8 @@ interface HeroAction {
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  @Input() backgroundImage: string = '../../../../../assets/womandoc2.jpg';
-  @Input() logoSrc: string = '../../../../../assets/logoSemcor.png';
+  @Input() backgroundImage: string = 'assets/womandoc2.jpg';
+  @Input() logoSrc: string = 'assets/logoSemcor.png';
   @Input() logoAlt: string = 'Logo SEMCOR';
   @Input() mainTitle: string = 'Especialistas en';
   @Input() highlightedTitle: string = 'Salud Cardiovascular';

@@ -27,7 +27,7 @@ interface ContactInfo {
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent implements OnInit {
-  @Input() logoSrc: string = '../../../../assets/semcor.png';
+  @Input() logoSrc: string = 'assets/semcor.png';
   @Input() logoAlt: string = 'SEMCOR Logo';
   @Input() isTransparent: boolean = false;
   

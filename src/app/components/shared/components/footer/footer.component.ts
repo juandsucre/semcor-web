@@ -44,7 +44,7 @@ interface Service {
 export class FooterComponent {
   @Input() companyName: string = 'Grupo SEMCOR';
   @Input() year: number = new Date().getFullYear();
-  @Input() logoSrc: string = '../../../../assets/semcor-white.png';
+  @Input() logoSrc: string = 'assets/semcor-white.png';
 
   @Output() footerAction = new EventEmitter<{linkId: string, action: string}>();
   @Output() socialClick = new EventEmitter<{platform: string, url: string}>();
@@ -105,21 +105,21 @@ export class FooterComponent {
     {
       id: 'facebook',
       name: 'Facebook',
-      icon: '../../../../assets/socials/facebook.png',
+      icon: 'assets/socials/facebook.png',
       url: 'https://facebook.com/gruposemcor',
       color: '#1877f2'
     },
     {
       id: 'instagram',
       name: 'Instagram',
-      icon: '../../../../assets/socials/instagram.png',
+      icon: 'assets/socials/instagram.png',
       url: 'https://instagram.com/gruposemcor',
       color: '#e4405f'
     },
     // {
     //   id: 'twitter',
     //   name: 'Twitter',
-    //   icon: '../../../../assets/socials/twitter.png',
+    //   icon: 'assets/socials/twitter.png',
     //   url: 'https://twitter.com/gruposemcor',
     //   color: '#1da1f2'
     // },

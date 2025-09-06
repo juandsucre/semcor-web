@@ -46,8 +46,8 @@ export class ServicesComponent {
       title: 'SEMCOR Clínica',
       subtitle: 'Especialidades Cardiovasculares',
       description: 'Centro médico especializado en cardiología con los más altos estándares de calidad y tecnología de vanguardia para el cuidado de tu corazón.',
-      mainImage: '../../../../../assets/services-img/services-1.png',
-      logoImage: '../../../../../assets/services-img/semcor.png',
+      mainImage: 'assets/services-img/services-1.png',
+      logoImage: 'assets/services-img/semcor.png',
       features: [
         'Cardiología Intervencionista',
         'Ecocardiografía Doppler',
@@ -66,8 +66,8 @@ export class ServicesComponent {
       title: 'Línea Roja',
       subtitle: 'Emergencias Cardiovasculares 24/7',
       description: 'Servicio de emergencias especializadas disponible las 24 horas para atender urgencias cardiovasculares con respuesta inmediata y profesional.',
-      mainImage: '../../../../../assets/services-img/services-2.png',
-      logoImage: '../../../../../assets/services-img/linearoja.png',
+      mainImage: 'assets/services-img/services-2.png',
+      logoImage: 'assets/services-img/linearoja.png',
       features: [
         'Atención 24/7',
         'Ambulancia Especializada',
@@ -87,8 +87,8 @@ export class ServicesComponent {
       title: 'SEMCOR Lab',
       subtitle: 'Laboratorio Cardiovascular',
       description: 'Laboratorio especializado en análisis cardiovasculares con tecnología de última generación para diagnósticos precisos y oportunos.',
-      mainImage: '../../../../../assets/services-img/services-3.png',
-      logoImage: '../../../../../assets/services-img/semcorlab.png',
+      mainImage: 'assets/services-img/services-3.png',
+      logoImage: 'assets/services-img/semcorlab.png',
       features: [
         'Biomarcadores Cardíacos',
         'Perfil Lipídico Avanzado',

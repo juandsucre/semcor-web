@@ -33,8 +33,8 @@ export class WithYouComponent implements OnInit {
   @Input() sectionSubtitle: string = 'Contigo';
   @Input() mainText: string = '¡Estamos a tu lado cuando';
   @Input() highlightedText: string = 'más lo necesitas!';
-  @Input() backgroundImage: string = '../../../../../assets/with-you/semcor-heart.png';
-  @Input() mainLogo: string = '../../../../../assets/with-you/SEMCOR CONTIGO-01.png';
+  @Input() backgroundImage: string = 'assets/with-you/semcor-heart.png';
+  @Input() mainLogo: string = 'assets/with-you/SEMCOR CONTIGO-01.png';
 
   @Output() cardInteraction = new EventEmitter<{cardId: string, action: string}>();
 
@@ -85,7 +85,7 @@ export class WithYouComponent implements OnInit {
   testimonialCards: TestimonialCard[] = [
     {
       id: 'prevention',
-      image: '../../../../../assets/with-you/SEMCOR CONTIGO-03.png',
+      image: 'assets/with-you/SEMCOR CONTIGO-03.png',
       title: 'Prevención',
       description: 'Programas de prevención cardiovascular personalizados para cuidar tu corazón',
       category: 'Cuidado Preventivo',
@@ -96,7 +96,7 @@ export class WithYouComponent implements OnInit {
     },
     {
       id: 'treatment',
-      image: '../../../../../assets/with-you/SEMCOR CONTIGO-04.png',
+      image: 'assets/with-you/SEMCOR CONTIGO-04.png',
       title: 'Tratamiento',
       description: 'Tecnología de vanguardia y especialistas de clase mundial',
       category: 'Tratamiento Especializado',
@@ -107,7 +107,7 @@ export class WithYouComponent implements OnInit {
     },
     {
       id: 'recovery',
-      image: '../../../../../assets/with-you/SEMCOR CONTIGO-05.png',
+      image: 'assets/with-you/SEMCOR CONTIGO-05.png',
       title: 'Recuperación',
       description: 'Rehabilitación cardiovascular con seguimiento personalizado',
       category: 'Rehabilitación',
@@ -118,7 +118,7 @@ export class WithYouComponent implements OnInit {
     },
     {
       id: 'wellness',
-      image: '../../../../../assets/with-you/SEMCOR CONTIGO-06.png',
+      image: 'assets/with-you/SEMCOR CONTIGO-06.png',
       title: 'Bienestar',
       description: 'Programas de bienestar para mantener un corazón saludable',
       category: 'Bienestar Integral',
