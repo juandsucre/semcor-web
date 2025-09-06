@@ -1,0 +1,167 @@
+label {
+    font-family: "Manrope", sans-serif;
+    color: #2F3068;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+}
+
+.form-control {
+    &:focus {
+        color: #2F3068 !important;
+        border-color: #8283bb;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(146, 0, 51, .25) !important;
+    }
+}
+
+.form-control {
+    border: .1px solid rgba(95, 33, 55, .25) !important;
+}
+
+::placeholder {
+  color:#8083bd;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #2F3068;
+}
+
+h4 {
+  font-family: "Manrope", sans-serif;
+}
+
+h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+}
+
+p {
+    font-family: "Manrope", sans-serif;
+}
+
+span {
+    font-family: "Manrope", sans-serif;
+}
+
+.mat-expansion-panel-header-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+}
+
+.container-title {
+    border: 1px solid #F5F5F5;
+    border-radius: 3px;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    img {
+        width: 100%;
+        height: 100%;
+        background-color: #F5F5F5;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.container-subtitle {
+    width: 60%;
+    text-align: justify;
+    p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: white;
+    }
+}
+
+.container-bg {
+    background-image: url('../../../assets/runner2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% 10%;
+    text-align: center;
+    padding: 100px 50px 100px 30px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mat-expansion-panel {
+    background:#9896B8 !important;
+    color: #fff;
+}
+
+.mat-expansion-panel-header-title {
+    color: #052460;
+}
+
+.text-end {
+    color: #2F3068;
+    font-weight: 600;
+}
+
+.text-start {
+    color: #920033;
+}
+
+.title-form {
+    color: #2F3068;
+    font-weight: 700;
+}
+
+.title-form.text-center {
+    font-weight: 600;
+}
+
+.heart-img {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info-title {
+    border-bottom: 1.5px solid #920033;
+    border-image-slice: 1;
+    width: 30%;
+    border-image-source: linear-gradient(to right, #920033, transparent);
+}
+
+.container-register {
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    background: #920033;
+    box-shadow: 0px 3px 20px rgba(255, 255, 255, 0.575);
+    width: 70%;
+    p {
+        color: #F5F5F5;
+        font-family: "Manrope", sans-serif;
+        font-weight: 300;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-bottom:  0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .container-bg {
+        background-position: 60% 30%;
+    }
+    .container-subtitle {
+        p {
+            font-size: 12px;
+        }
+    }
+    .container-bg {
+        height: 400px;
+        padding: 50px 50px 100px 30px;
+    }
+}

@@ -6,7 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   standalone: true,
   imports: [MatFormFieldModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.sass'
+  styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 

@@ -1,0 +1,16 @@
+<div class="container mt-2">
+  <div class="border-2 border-indigo-200 bg-indigo-50 shadow-semcor rounded-semcor min-h-[270px] p-5 mt-2 md:mt-5">
+    <div class="row mt-2 mb-2">
+      <div class="col-12">
+        <img [src]="iconSrc" [alt]="iconAlt" class="w-16 h-16 mx-auto">
+      </div>
+    </div>
+    <div class="text-center">
+      <h6 class="font-inter font-bold text-primary uppercase text-lg mb-4 relative z-10">
+        {{ title }}
+      </h6>
+      <p class="text-secondary font-normal text-lg relative font-manrope z-10" [innerHTML]="description">
+      </p>
+    </div>
+  </div>
+</div>

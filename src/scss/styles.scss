@@ -1,0 +1,83 @@
+// ==========================================================================
+// ARCHIVO PRINCIPAL DE ESTILOS - SEMCOR
+// ==========================================================================
+
+// Tailwind CSS (debe ir ANTES para evitar conflictos)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Importar variables y mixins DESPUÉS de Tailwind
+@import 'variables/index';
+@import 'mixins/mixins';
+
+
+// Fuente personalizada
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url(../assets/fonts/Futura-Medium.otf);
+    font-display: swap;
+}
+
+// Estilos base
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
+    color: $body-color;
+    background: $background-color;
+}
+
+// Estilos de encabezados
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    color: $heading-color;
+    margin: 0;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+// Responsive typography
+@include respond-to(xs) {
+    h1 { font-size: $font-size-h1-mobile; }
+    h2 { font-size: $font-size-h2-mobile; }
+    h3 { font-size: $font-size-h3-mobile; }
+    h4 { font-size: $font-size-h4-mobile; }
+    h5 { font-size: $font-size-h5-mobile; }
+    h6 { font-size: $font-size-h6-mobile; }
+}
+
+// Clases utilitarias personalizadas
+.text-primary { color: $text-primary; }
+.text-secondary { color: $text-secondary; }
+.bg-primary { background-color: $primary-color; }
+.bg-secondary { background-color: $secondary-color; }
+
+.btn-semcor {
+    @include button-semcor;
+}
+
+.btn-semcor-secondary {
+    @include button-semcor($secondary-color, $text-white, darken($secondary-color, 10%));
+}
+
+.card-semcor {
+    @include card-semcor;
+}
+
+.gradient-primary {
+    @include gradient-primary;
+}

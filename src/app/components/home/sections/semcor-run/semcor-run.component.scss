@@ -1,0 +1,417 @@
+// ===================================================================
+// JORNADA CIENTÍFICA - COMPONENTE PROFESIONAL
+// ===================================================================
+
+// Variables
+$primary-red: #dc2626;
+$primary-red-dark: #b91c1c;
+$text-primary: #111827;
+$text-secondary: #6b7280;
+$bg-light: #f8fafc;
+$bg-white: #ffffff;
+$border-light: #e5e7eb;
+$shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Sección principal
+.scientific-conference-section {
+  position: relative;
+  overflow: hidden;
+  
+  // Asegurar que el fondo decorativo no interfiera
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(248, 250, 252, 0.8) 0%, 
+      rgba(255, 255, 255, 0.9) 50%, 
+      rgba(239, 246, 255, 0.8) 100%);
+    z-index: 1;
+  }
+  
+  // Contenido principal sobre el fondo
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+// Tarjetas de destacados del evento
+.event-highlights {
+  .highlight-card {
+    background: $bg-white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: $shadow-soft;
+    border: 1px solid $border-light;
+    transition: $transition-smooth;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-medium;
+      border-color: rgba($primary-red, 0.2);
+    }
+    
+    .highlight-icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: $transition-smooth;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// Programa científico
+.scientific-program {
+  background: $bg-white;
+  border-radius: 1.5rem;
+  box-shadow: $shadow-large;
+  padding: 3rem 2rem;
+  
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
+}
+
+// Tarjetas de sesiones
+.session-card {
+  background: $bg-white;
+  border: 2px solid $border-light;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: $transition-smooth;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+  // Efecto hover general
+  &:hover {
+    border-color: rgba($primary-red, 0.3);
+    box-shadow: $shadow-medium;
+    transform: translateY(-2px);
+  }
+  
+  // Efectos específicos por tipo de sesión
+  &.keynote-session {
+    &:hover {
+      border-color: #a855f7;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), transparent);
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #a855f7;
+    }
+  }
+  
+  &.workshop-session {
+    &:hover {
+      border-color: #3b82f6;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), transparent);
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #3b82f6;
+    }
+  }
+  
+  &.panel-session {
+    &:hover {
+      border-color: #10b981;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), transparent);
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #10b981;
+    }
+  }
+  
+  &.presentation-session {
+    &:hover {
+      border-color: #f59e0b;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), transparent);
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #f59e0b;
+    }
+  }
+}
+
+// Badge de tipo de sesión
+.session-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Botones de call to action
+.registration-btn {
+  background: $bg-white;
+  color: $primary-red;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  transition: $transition-smooth;
+  box-shadow: $shadow-soft;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background: #f9fafb;
+    box-shadow: $shadow-large;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-medium;
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-red;
+    outline-offset: 2px;
+  }
+}
+
+.info-btn {
+  border: 2px solid $bg-white;
+  background: transparent;
+  color: $bg-white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  transition: $transition-smooth;
+  cursor: pointer;
+  
+  &:hover {
+    background: $bg-white;
+    color: $primary-red;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:focus {
+    outline: 2px solid $bg-white;
+    outline-offset: 2px;
+  }
+}
+
+// Animaciones de entrada
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Aplicar animaciones con retrasos escalonados
+.scientific-conference-section {
+  .animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+  }
+  
+  .animate-fade-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+}
+
+// Efectos de glassmorphism sutil
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Responsividad mejorada
+@media (max-width: 768px) {
+  .scientific-conference-section {
+    padding: 3rem 0;
+    
+    h1 {
+      font-size: 2.5rem !important;
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: 1.875rem !important;
+    }
+    
+    .session-card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .registration-btn,
+    .info-btn {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .scientific-program {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+  }
+  
+  .session-card {
+    &::before {
+      width: 3px;
+    }
+  }
+}
+
+// Estados de focus mejorados para accesibilidad
+button:focus-visible,
+.session-card:focus-visible {
+  outline: 2px solid $primary-red;
+  outline-offset: 2px;
+}
+
+// Optimizaciones de rendimiento
+.scientific-conference-section {
+  will-change: transform;
+}
+
+.session-card,
+.registration-btn,
+.info-btn {
+  will-change: transform, box-shadow;
+}
+
+// Efectos de partículas decorativas (opcional)
+.decorative-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  &::before {
+    background: linear-gradient(45deg, $primary-red, #f59e0b);
+    top: -150px;
+    right: -150px;
+    animation-delay: 0s;
+  }
+  
+  &::after {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    bottom: -150px;
+    left: -150px;
+    animation-delay: 3s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+// Transiciones globales suaves
+* {
+  transition: color 0.2s ease, 
+              background-color 0.2s ease, 
+              border-color 0.2s ease, 
+              transform 0.2s ease, 
+              opacity 0.2s ease,
+              box-shadow 0.2s ease;
+}
