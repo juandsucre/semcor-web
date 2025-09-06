@@ -57,7 +57,7 @@
 .container-img {
   width: 100%;
   height: 750px;
-  background-image: url(../../../assets/womandoc2.jpg);
+  background-image: url(assets/womandoc2.jpg);
 }
 
 .item-us {
@@ -94,7 +94,7 @@
 }
 
 .register-run {
-  background-image: url(../../../assets/semcor-run/footRunner.png);
+  background-image: url(assets/semcor-run/footRunner.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -341,7 +341,7 @@
 }
 
 .with-you {
-  background-image: url(../../../assets/with-you/semcor-heart.png);
+  background-image: url(assets/with-you/semcor-heart.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

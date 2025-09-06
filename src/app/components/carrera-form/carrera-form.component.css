@@ -83,7 +83,6 @@ span {
 }
 
 .container-bg {
-  background-image: url("../../../assets/runner2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 25% 10%;

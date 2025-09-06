@@ -302,7 +302,6 @@ $transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     .feature-card {
       .flex.items-center.space-x-4 {
         flex-direction: column;
-        space-x: 0;
         gap: 1rem;
         text-align: center;
       }
