@@ -1,0 +1,111 @@
+// ===================================================================
+// NAVBAR PROFESIONAL - CLÍNICA CARDIOLÓGICA
+// ===================================================================
+
+// Variables
+$navbar-height: 64px;
+$navbar-bg: #ffffff;
+$navbar-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+$navbar-shadow-scrolled: 0 4px 20px rgba(0, 0, 0, 0.15);
+$text-primary: #374151;
+$text-secondary: #6b7280;
+$text-hover: #dc2626;
+$border-color: #e5e7eb;
+$transition-smooth: all 0.2s ease;
+
+// Navbar principal profesional
+.professional-navbar {
+  background: $navbar-bg;
+  box-shadow: $navbar-shadow;
+  height: $navbar-height;
+  
+  // Estado con scroll - sombra más pronunciada
+  &.scrolled {
+    box-shadow: $navbar-shadow-scrolled;
+  }
+}
+
+// Enlaces de navegación profesionales
+.nav-link {
+  position: relative;
+  color: $text-primary;
+  transition: $transition-smooth;
+  
+  &:hover {
+    color: $text-hover;
+  }
+  
+  &.active {
+    color: $text-hover;
+    font-weight: 600;
+  }
+  
+  &.emergency-nav {
+    color: $text-hover;
+    font-weight: 600;
+  }
+}
+
+// Botón de emergencias profesional
+.emergency-btn {
+  background: #dc2626;
+  color: white;
+  transition: $transition-smooth;
+  
+  &:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Menú móvil profesional
+.emergency-mobile {
+  background: rgba(220, 38, 38, 0.1) !important;
+  border: 1px solid rgba(220, 38, 38, 0.2) !important;
+  color: #dc2626 !important;
+  
+  &:hover {
+    background: rgba(220, 38, 38, 0.15) !important;
+  }
+}
+
+// Responsividad
+@media (max-width: 1024px) {
+  .professional-navbar {
+    .emergency-btn {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .professional-navbar {
+    height: $navbar-height;
+    
+    .nav-link {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-navbar {
+    padding: 0 16px;
+  }
+}
+
+// Mejoras de accesibilidad
+.focus-visible:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+// Transiciones suaves
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}

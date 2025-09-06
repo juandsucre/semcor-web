@@ -1,3 +1,12 @@
+.title .social {
+  border-radius: 45px 5px 45px 5px;
+  background: #920033;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
 .title .container-title-img {
   display: flex;
   justify-content: center;
@@ -56,7 +65,7 @@
   background: #ededf9;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 45px 5px 45px 5px;
-  min-height: 350px;
+  min-height: 270px;
   padding: 20px !important;
 }
 
@@ -133,7 +142,7 @@
   font-size: 25px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .col-button {
     justify-content: start;
   }
@@ -151,6 +160,9 @@
   }
   .border-button {
     width: 100% !important;
+  }
+  .border-button .btn {
+    font-size: 15px !important;
   }
   .container-month {
     padding: 0 !important;
@@ -184,24 +196,30 @@
   }
   .item-us {
     margin-top: 20px;
-    min-height: 300px;
+    min-height: 250px;
   }
   .register-container img {
     width: 200px !important;
   }
+  .container-subtitle {
+    padding: 0 !important;
+  }
+  .title.d-flex {
+    flex-direction: column;
+  }
+  .title .social {
+    font-size: 1rem !important;
+    padding: 5px;
+  }
+  .container-title-img {
+    flex-direction: column;
+  }
 }
 
 .item-services {
-  height: 250px;
-  border-radius: 4px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../../../assets/laboratory.jpg);
-  border: .5px solid #920033;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .item-services .box-text h6 {
@@ -215,31 +233,15 @@
   font-weight: 600;
 }
 
-.item-services::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  z-index: 1;
-}
-
-.item-services::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
 .text-important h2 {
   color: #920033;
   letter-spacing: .4px;
   font-family: "Montserrat", Sans-serif;
   font-weight: 700;
+}
+
+.semcor-run {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .register-container img {
@@ -295,7 +297,7 @@
 
 .container-month .month {
   background: #920033;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   font-weight: 400;
 }
 
@@ -311,4 +313,36 @@
   width: 60%;
   text-align: center;
   color: #fff;
+}
+
+.container-bg {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  top: 0;
+  right: 0;
+}
+
+.with-you-title .title {
+  font-family: "Montserrat", Sans-serif;
+  color: #2F3068;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.with-you-title .red-title {
+  color: #920033;
+}
+
+.container-img-services {
+  height: 100%;
+}
+
+.with-you {
+  background-image: url(../../../assets/with-you/semcor-heart.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

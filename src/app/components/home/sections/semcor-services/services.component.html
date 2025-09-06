@@ -1,0 +1,156 @@
+<section class="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-10 left-10 w-32 h-32 bg-red-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Header de la sección -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-gray-200/50 shadow-sm">
+        <div class="w-2 h-2 bg-red-500 rounded-full mr-3 animate-pulse"></div>
+        <span class="text-gray-600 font-medium text-sm tracking-wider uppercase">Excelencia Médica</span>
+      </div>
+      
+      <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+        {{ sectionTitle }}
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600 mt-2">
+          del Corazón
+        </span>
+      </h2>
+      
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+        {{ sectionSubtitle }}
+      </p>
+      
+      <div class="flex justify-center items-center space-x-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1 max-w-xs"></div>
+        <div class="bg-gradient-to-r from-red-600 to-blue-600 text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg">
+          {{ socialHandle }}
+        </div>
+        <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent flex-1 max-w-xs"></div>
+      </div>
+    </div>
+
+    <!-- Grid de servicios -->
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+      <div 
+        *ngFor="let service of services; let i = index" 
+        class="group relative"
+        [class.md:scale-105]="service.isHighlighted"
+        [class.md:z-10]="service.isHighlighted">
+        
+        <!-- Tarjeta principal -->
+        <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group-hover:-translate-y-2">
+          
+          <!-- Badge de destacado -->
+          <div 
+            *ngIf="service.isHighlighted" 
+            class="absolute top-6 right-6 z-20">
+            <div class="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg animate-pulse">
+              Emergencias
+            </div>
+          </div>
+
+          <!-- Header con gradiente -->
+          <div 
+            class="relative h-48 flex items-center justify-center overflow-hidden"
+            [style.background]="service.color.gradient">
+            
+            <!-- Patrón decorativo -->
+            <div class="absolute inset-0 opacity-10">
+              <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+            </div>
+            
+            <!-- Imagen principal -->
+            <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-500">
+              <img 
+                [src]="service.mainImage" 
+                [alt]="service.title"
+                class="w-32 h-32 object-contain drop-shadow-2xl">
+            </div>
+            
+            <!-- Efectos de luz -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-8">
+            <!-- Logo del servicio -->
+            <div class="flex justify-center mb-6">
+              <img 
+                [src]="service.logoImage" 
+                [alt]="service.title + ' logo'"
+                class="h-12 object-contain opacity-90">
+            </div>
+
+            <!-- Título y subtítulo -->
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ service.title }}</h3>
+              <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">{{ service.subtitle }}</p>
+            </div>
+
+            <!-- Descripción -->
+            <p class="text-gray-600 leading-relaxed mb-6 text-center">
+              {{ service.description }}
+            </p>
+
+            <!-- Lista de características -->
+            <div class="space-y-3 mb-8">
+              <div 
+                *ngFor="let feature of service.features"
+                class="flex items-center text-sm text-gray-700">
+                <div 
+                  class="w-2 h-2 rounded-full mr-3 flex-shrink-0"
+                  [style.background]="service.color.primary"></div>
+                <span>{{ feature }}</span>
+              </div>
+            </div>
+
+            <!-- Botón CTA -->
+            <button 
+              class="w-full py-4 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95 focus-visible shimmer-effect"
+              [style.background]="service.color.gradient"
+              [class.animate-pulse]="service.isHighlighted"
+              [class.emergency-badge]="service.isHighlighted"
+              (click)="onServiceClick(service.id, 'cta_click')"
+              [attr.aria-label]="'Acceder a ' + service.title">
+              {{ service.ctaText }}
+              <svg class="w-5 h-5 ml-2 inline-block icon-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Efecto hover -->
+          <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-3xl"></div>
+        </div>
+
+        <!-- Sombra decorativa -->
+        <div 
+          class="absolute inset-0 rounded-3xl opacity-20 blur-xl transform translate-y-4 transition-all duration-500 group-hover:opacity-30 group-hover:translate-y-6 -z-10"
+          [style.background]="service.color.gradient">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer de la sección -->
+    <div class="text-center mt-16">
+      <div class="inline-flex items-center space-x-6 bg-white/80 backdrop-blur-sm rounded-2xl px-8 py-4 border border-gray-200/50 shadow-sm">
+        <div class="flex items-center space-x-2">
+          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-sm font-medium text-gray-700">Disponible 24/7</span>
+        </div>
+        <div class="w-px h-6 bg-gray-300"></div>
+        <div class="flex items-center space-x-2">
+          <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-sm font-medium text-gray-700">Cuidado Especializado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

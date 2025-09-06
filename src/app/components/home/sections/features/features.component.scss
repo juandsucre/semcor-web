@@ -1,0 +1,402 @@
+// ===================================================================
+// FEATURES CARDIOVASCULARES - COMPONENTE PROFESIONAL
+// ===================================================================
+
+// Variables
+$primary-red: #dc2626;
+$primary-red-dark: #b91c1c;
+$primary-blue: #3b82f6;
+$primary-purple: #8b5cf6;
+$primary-green: #10b981;
+$text-primary: #111827;
+$text-secondary: #6b7280;
+$bg-white: #ffffff;
+$bg-light: #f9fafb;
+$border-light: #e5e7eb;
+$shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Sección principal
+.cardiovascular-features-section {
+  position: relative;
+  
+  // Fondo con gradiente sutil
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(249, 250, 251, 1) 50%, 
+    rgba(255, 255, 255, 1) 100%);
+}
+
+// Tarjetas de características
+.feature-card {
+  transition: $transition-smooth;
+  
+  // Contenedor principal
+  .relative {
+    transition: $transition-bounce;
+    
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+  }
+  
+  // Estados por color de característica
+  &.feature-red {
+    .feature-icon-bg {
+      background: linear-gradient(135deg, $primary-red, $primary-red-dark);
+    }
+    
+    .feature-stat-color {
+      color: $primary-red;
+    }
+    
+    .feature-subtitle-color {
+      color: $primary-red;
+    }
+    
+    .feature-check-color {
+      color: $primary-red;
+    }
+    
+    .feature-cta-btn {
+      background: rgba($primary-red, 0.1);
+      color: $primary-red;
+      border: 1px solid rgba($primary-red, 0.2);
+      
+      &:hover {
+        background: $primary-red;
+        color: white;
+        box-shadow: 0 8px 25px rgba($primary-red, 0.3);
+      }
+    }
+  }
+  
+  &.feature-blue {
+    .feature-icon-bg {
+      background: linear-gradient(135deg, $primary-blue, #1d4ed8);
+    }
+    
+    .feature-stat-color {
+      color: $primary-blue;
+    }
+    
+    .feature-subtitle-color {
+      color: $primary-blue;
+    }
+    
+    .feature-check-color {
+      color: $primary-blue;
+    }
+    
+    .feature-cta-btn {
+      background: rgba($primary-blue, 0.1);
+      color: $primary-blue;
+      border: 1px solid rgba($primary-blue, 0.2);
+      
+      &:hover {
+        background: $primary-blue;
+        color: white;
+        box-shadow: 0 8px 25px rgba($primary-blue, 0.3);
+      }
+    }
+  }
+  
+  &.feature-purple {
+    .feature-icon-bg {
+      background: linear-gradient(135deg, $primary-purple, #7c3aed);
+    }
+    
+    .feature-stat-color {
+      color: $primary-purple;
+    }
+    
+    .feature-subtitle-color {
+      color: $primary-purple;
+    }
+    
+    .feature-check-color {
+      color: $primary-purple;
+    }
+    
+    .feature-cta-btn {
+      background: rgba($primary-purple, 0.1);
+      color: $primary-purple;
+      border: 1px solid rgba($primary-purple, 0.2);
+      
+      &:hover {
+        background: $primary-purple;
+        color: white;
+        box-shadow: 0 8px 25px rgba($primary-purple, 0.3);
+      }
+    }
+  }
+  
+  &.feature-green {
+    .feature-icon-bg {
+      background: linear-gradient(135deg, $primary-green, #059669);
+    }
+    
+    .feature-stat-color {
+      color: $primary-green;
+    }
+    
+    .feature-subtitle-color {
+      color: $primary-green;
+    }
+    
+    .feature-check-color {
+      color: $primary-green;
+    }
+    
+    .feature-cta-btn {
+      background: rgba($primary-green, 0.1);
+      color: $primary-green;
+      border: 1px solid rgba($primary-green, 0.2);
+      
+      &:hover {
+        background: $primary-green;
+        color: white;
+        box-shadow: 0 8px 25px rgba($primary-green, 0.3);
+      }
+    }
+  }
+}
+
+// Iconos principales
+.feature-icon-bg {
+  transition: $transition-smooth;
+  box-shadow: $shadow-soft;
+  
+  &:hover {
+    box-shadow: $shadow-medium;
+  }
+}
+
+// Botones de call-to-action
+.feature-cta-btn {
+  transition: $transition-smooth;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+// Animaciones de entrada
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Aplicar animaciones con retrasos escalonados
+.cardiovascular-features-section {
+  .feature-card {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+  }
+}
+
+// Efectos de hover avanzados
+.feature-card:hover {
+  .feature-icon-bg {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .feature-cta-btn svg {
+    transform: translateX(4px);
+  }
+}
+
+// Responsividad mejorada
+@media (max-width: 1024px) {
+  .cardiovascular-features-section {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cardiovascular-features-section {
+    padding: 3rem 0;
+    
+    h2 {
+      font-size: 2.5rem !important;
+      line-height: 1.2;
+    }
+    
+    h3 {
+      font-size: 1.5rem !important;
+    }
+    
+    .feature-card .relative {
+      padding: 1.5rem;
+    }
+    
+    .feature-icon-bg {
+      width: 3rem;
+      height: 3rem;
+      
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .cardiovascular-features-section {
+    .flex.flex-col.sm\\:flex-row {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .feature-card {
+      .flex.items-center.space-x-4 {
+        flex-direction: column;
+        space-x: 0;
+        gap: 1rem;
+        text-align: center;
+      }
+      
+      .text-right {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Estados de focus mejorados para accesibilidad
+.feature-card:focus-visible,
+.feature-cta-btn:focus-visible {
+  outline: 2px solid $primary-red;
+  outline-offset: 2px;
+}
+
+// Optimizaciones de rendimiento
+.cardiovascular-features-section {
+  will-change: transform;
+}
+
+.feature-card,
+.feature-icon-bg,
+.feature-cta-btn {
+  will-change: transform, box-shadow;
+}
+
+// Efectos de glassmorphism sutil
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Animación de pulso para estadísticas
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.feature-stat-color {
+  animation: pulse 2s infinite;
+}
+
+// Efectos de brillo en hover
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.feature-card:hover::before {
+  left: 100%;
+}
+
+// Transiciones globales suaves
+* {
+  transition: color 0.2s ease, 
+              background-color 0.2s ease, 
+              border-color 0.2s ease, 
+              transform 0.2s ease, 
+              opacity 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+// Mejoras de contraste para accesibilidad
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .feature-icon-bg,
+  .feature-cta-btn {
+    animation: none;
+    transition: none;
+  }
+  
+  .feature-card:hover .relative {
+    transform: none;
+  }
+}
+

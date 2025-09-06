@@ -1,0 +1,565 @@
+// ===================================================================
+// HEALTH CARE SECTION - COMPONENTE PROFESIONAL
+// ===================================================================
+
+// Variables
+$primary-red: #dc2626;
+$primary-red-dark: #b91c1c;
+$primary-blue: #3b82f6;
+$primary-purple: #8b5cf6;
+$primary-green: #10b981;
+$text-primary: #111827;
+$text-secondary: #6b7280;
+$bg-white: #ffffff;
+$bg-light: #f9fafb;
+$border-light: #e5e7eb;
+$shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Sección principal
+.healthcare-section {
+  position: relative;
+  
+  // Fondo con gradiente muy sutil y claro
+  background: linear-gradient(135deg, 
+    rgba(249, 250, 251, 1) 0%, 
+    rgba(255, 255, 255, 1) 50%, 
+    rgba(248, 250, 252, 1) 100%);
+  
+  // Elementos decorativos de fondo muy sutiles
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23e5e7eb" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    z-index: 1;
+  }
+  
+  // Contenido principal sobre el fondo
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+// Tarjetas de estadísticas
+.stat-card {
+  transition: $transition-smooth;
+  
+  .bg-white {
+    transition: $transition-bounce;
+    
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+  }
+  
+  // Animación del valor estadístico
+  .stat-value {
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba($primary-red, 0.1),
+        transparent
+      );
+      animation: shimmer 2s infinite;
+    }
+  }
+}
+
+// Animación shimmer
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+// Tarjetas de valores institucionales
+.value-card {
+  transition: $transition-smooth;
+  
+  // Estados por color de valor
+  &.value-blue {
+    .value-accent-bg {
+      background: $primary-blue;
+    }
+    
+    .value-icon-bg {
+      background: linear-gradient(135deg, $primary-blue, #1d4ed8);
+    }
+    
+    .group:hover .value-title-color {
+      color: $primary-blue;
+    }
+    
+    .value-arrow-color {
+      color: $primary-blue;
+    }
+  }
+  
+  &.value-red {
+    .value-accent-bg {
+      background: $primary-red;
+    }
+    
+    .value-icon-bg {
+      background: linear-gradient(135deg, $primary-red, $primary-red-dark);
+    }
+    
+    .group:hover .value-title-color {
+      color: $primary-red;
+    }
+    
+    .value-arrow-color {
+      color: $primary-red;
+    }
+  }
+  
+  &.value-purple {
+    .value-accent-bg {
+      background: $primary-purple;
+    }
+    
+    .value-icon-bg {
+      background: linear-gradient(135deg, $primary-purple, #7c3aed);
+    }
+    
+    .group:hover .value-title-color {
+      color: $primary-purple;
+    }
+    
+    .value-arrow-color {
+      color: $primary-purple;
+    }
+  }
+  
+  &.value-green {
+    .value-accent-bg {
+      background: $primary-green;
+    }
+    
+    .value-icon-bg {
+      background: linear-gradient(135deg, $primary-green, #059669);
+    }
+    
+    .group:hover .value-title-color {
+      color: $primary-green;
+    }
+    
+    .value-arrow-color {
+      color: $primary-green;
+    }
+  }
+  
+  // Efectos de hover
+  &:hover {
+    .bg-white {
+      transform: translateY(-4px);
+      box-shadow: $shadow-large;
+    }
+    
+    .value-icon-bg {
+      transform: scale(1.1) rotate(-5deg);
+    }
+  }
+}
+
+// Iconos de valores
+.value-icon-bg {
+  transition: $transition-smooth;
+  box-shadow: $shadow-soft;
+  
+  &:hover {
+    box-shadow: $shadow-medium;
+  }
+}
+
+// Animaciones de entrada
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Aplicar animaciones con retrasos escalonados
+.healthcare-section {
+  .stat-card {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+  }
+  
+  .value-card {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    
+    &:nth-child(odd) {
+      animation-name: slideInLeft;
+    }
+    
+    &:nth-child(even) {
+      animation-name: slideInRight;
+    }
+    
+    &:nth-child(1) { animation-delay: 0.2s; }
+    &:nth-child(2) { animation-delay: 0.3s; }
+    &:nth-child(3) { animation-delay: 0.4s; }
+    &:nth-child(4) { animation-delay: 0.5s; }
+  }
+}
+
+// Animación de pulso para estadísticas
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.stat-value {
+  animation: pulse 3s infinite;
+}
+
+// Efectos de glassmorphism
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Responsividad mejorada
+@media (max-width: 1024px) {
+  .healthcare-section {
+    .grid.lg\\:grid-cols-4 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    
+    .grid.md\\:grid-cols-2 {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .healthcare-section {
+    padding: 3rem 0;
+    
+    h1 {
+      font-size: 3rem !important;
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: 1.5rem !important;
+    }
+    
+    .stat-card .bg-white {
+      padding: 1.5rem;
+    }
+    
+    .value-card .bg-white {
+      padding: 1.5rem;
+    }
+    
+    .grid.lg\\:grid-cols-4 {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .flex.items-start.space-x-6 {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .healthcare-section {
+    .bg-gradient-to-r.from-red-600 {
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    
+    .grid.md\\:grid-cols-3 {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .stat-card .w-16.h-16 {
+      width: 3rem;
+      height: 3rem;
+      
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    
+    .value-card .w-14.h-14 {
+      width: 3rem;
+      height: 3rem;
+      
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+}
+
+// Estados de focus mejorados para accesibilidad
+.value-card:focus-visible {
+  outline: 2px solid $primary-red;
+  outline-offset: 2px;
+}
+
+// Optimizaciones de rendimiento
+.healthcare-section {
+  will-change: transform;
+}
+
+.stat-card,
+.value-card,
+.value-icon-bg {
+  will-change: transform, box-shadow;
+}
+
+// Efectos de hover avanzados con partículas
+.stat-card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba($primary-red, 0.05) 0%, transparent 70%);
+  animation: expand 0.6s ease-out;
+  z-index: 1;
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+// Efectos de brillo en hover para valores
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.value-card:hover::before {
+  left: 100%;
+}
+
+// Transiciones globales suaves
+* {
+  transition: color 0.2s ease, 
+              background-color 0.2s ease, 
+              border-color 0.2s ease, 
+              transform 0.2s ease, 
+              opacity 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+// Mejoras de contraste para accesibilidad
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .value-card,
+  .stat-value {
+    animation: none;
+    transition: none;
+  }
+  
+  .stat-card:hover .bg-white,
+  .value-card:hover .bg-white {
+    transform: none;
+  }
+}
+
+// Animaciones de contador para estadísticas
+.stat-value[data-value] {
+  position: relative;
+  
+  &::after {
+    content: attr(data-value);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba($primary-red, 0.1) 50%,
+      transparent 100%
+    );
+    animation: countUp 2s ease-out;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ECG base optimizado
+.heartbeat-line-container, 
+.heartbeat-line-container-title, 
+.heartbeat-line-container-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heartbeat-line, 
+.heartbeat-line-title, 
+.heartbeat-line-section {
+  width: 100%;
+  height: 100%;
+}
+
+// Animaciones ECG optimizadas
+.ecg-heartbeat-red-title, .ecg-heartbeat-red-section {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: drawECG 12s linear infinite;
+}
+
+.ecg-pulse-red-title, .ecg-pulse-red-section {
+  animation: movePulse 6s linear infinite;
+}
+
+.ecg-baseline-red-title, .ecg-baseline-red-section {
+  animation: baseline 3s ease-in-out infinite;
+}
+
+@keyframes drawECG {
+  0%, 100% { stroke-dashoffset: 1800; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 0.7; }
+}
+
+@keyframes movePulse {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 0.8; }
+}
+
+@keyframes baseline {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+// Configuraciones específicas
+.heartbeat-line-container-title {
+  width: 120%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.heartbeat-line-container-section {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .heartbeat-line-container-title { height: 80px; }
+  .heartbeat-line-title { transform: scale(0.8); }
+  .heartbeat-line-container-section { transform: scale(0.9); }
+}

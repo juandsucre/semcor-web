@@ -1,0 +1,192 @@
+// ==========================================================================
+// MIXINS ÚTILES - SEMCOR
+// ==========================================================================
+
+// Mixin para media queries responsivos
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 575px) { @content; }
+  }
+  @else if $breakpoint == sm {
+    @media only screen and (min-width: 576px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @else if $breakpoint == xxl {
+    @media only screen and (min-width: 1400px) { @content; }
+  }
+}
+  
+  // Mixin para centrar elementos
+  @mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  // Mixin para truncar texto
+  @mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  // Mixin para líneas múltiples de texto
+  @mixin line-clamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  // Mixin para botones SEMCOR
+@mixin button-semcor($bg-color: $primary-color, $text-color: white, $hover-bg: darken($bg-color, 10%)) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-family: $font-primary;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $hover-bg;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: $bg-color;
+      transform: none;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+  
+  // Mixin para tarjetas SEMCOR
+@mixin card-semcor {
+  background: #ededf9;
+  border: 1.5px solid #d3d4f9;
+  border-radius: 45px 5px 45px 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+  
+  // Mixin para gradientes
+@mixin gradient-primary {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+}
+  
+  @mixin gradient-text($gradient) {
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  // Mixin para animaciones
+  @mixin fade-in($duration: 0.3s) {
+    opacity: 0;
+    animation: fadeIn $duration ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @mixin slide-up($duration: 0.3s, $distance: 20px) {
+    transform: translateY($distance);
+    opacity: 0;
+    animation: slideUp $duration ease-out forwards;
+  }
+  
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  // Mixin para aspect ratio
+  @mixin aspect-ratio($width, $height) {
+    position: relative;
+    
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+    
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  // Mixin para focus states accesibles
+  @mixin focus-visible {
+    &:focus-visible {
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+  }
+  
+  // Mixin para scrollbar personalizado
+@mixin scrollbar-semcor {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 0.375rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 0.375rem;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}

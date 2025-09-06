@@ -6,13 +6,20 @@ import {AbstractControl, FormBuilder, FormControl, FormGroup, FormsModule, React
 import {MatExpansionModule} from '@angular/material/expansion';
 import  Runner  from "../../interfaces/runner.interface";
 import { RunnerService } from '../../services/runner.service';
+import { RECAPTCHA_SETTINGS, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-carrera-form',
   standalone: true,
-  imports: [MatIconModule,MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule,MatExpansionModule],
+  imports: [MatIconModule,MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule,MatExpansionModule,RecaptchaModule],
   templateUrl: './carrera-form.component.html',
-  styleUrl: './carrera-form.component.sass'
+  styleUrl: './carrera-form.component.scss',
+  providers: [
+    {
+      provide: RECAPTCHA_SETTINGS,
+      useValue: { siteKey: "6LfqNsUpAAAAAPW3-AQCLenjTzmlMMIeXvlpq5Cp" } as RecaptchaSettings,
+    },
+  ],
 })
 export class CarreraFormComponent implements OnInit {
 
@@ -80,5 +87,8 @@ export class CarreraFormComponent implements OnInit {
       console.log(runners);
     }
     );
+  }
+  resolved(event: any){
+    console.log(event);
   }
 }
