@@ -1,12 +1,13 @@
 {
-  "name": "semcor-app",
+  "name": "semcor-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-github": "ng build --output-path docs --base-href /semcor-web/",
     "watch": "ng build --watch --configuration development",
+    "github-build": "ng build --configuration production --base-href=/semcor-web/",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/semcor-web/ --no-silent",
     "test": "ng test"
   },
   "private": true,

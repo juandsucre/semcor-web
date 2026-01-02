@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "semcor-app": {
+    "semcor-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,13 +12,13 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "web",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/semcor-app",
+              "base": "dist/semcor-web",
               "browser": ""
               },
             "index": "src/index.html",
@@ -103,6 +103,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
