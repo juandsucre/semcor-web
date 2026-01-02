@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
   public activeItem = 'inicio';
 
   contactInfo: ContactInfo = {
-    phone: '+58 (1) 123-4567',
+    phone: '+58 412 4521895',
     emergency: '+58 (1) 911-SEMCOR',
     email: 'contacto@semcor.com'
   };
@@ -53,28 +53,20 @@ export class NavbarComponent implements OnInit {
     {
       id: 'servicios',
       label: 'Servicios',
-      route: '/servicios'
+      action: 'scroll',
+      route: '#servicios'
     },
     {
-      id: 'especialidades',
-      label: 'Especialidades',
-      route: '/especialidades'
-    },
-    {
-      id: 'linea-roja',
-      label: 'Emergencias',
-      action: 'emergency',
-      isSpecial: true
-    },
-    {
-      id: 'acerca',
-      label: 'Acerca de',
-      route: '/acerca'
+      id: 'nosotros',
+      label: 'Nosotros',
+      action: 'scroll',
+      route: '#why-choose-us'
     },
     {
       id: 'contacto',
       label: 'Contacto',
-      route: '/contacto'
+      action: 'scroll',
+      route: '#footer'
     }
   ];
 
@@ -103,7 +95,14 @@ export class NavbarComponent implements OnInit {
 
     if (item.action === 'emergency') {
       this.onEmergencyClick();
-    } else if (item.route) {
+    } else if (item.action === 'scroll' && item.route?.startsWith('#')) {
+      // Smooth scroll to section
+      const sectionId = item.route.substring(1);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (item.route && !item.route.startsWith('#')) {
       this.router.navigate([item.route]);
     }
 
@@ -142,5 +141,19 @@ export class NavbarComponent implements OnInit {
   onLogoClick() {
     this.router.navigate(['/home']);
     this.activeItem = 'inicio';
+  }
+
+  // WhatsApp link generator
+  getWhatsAppLink(): string {
+    // Remove spaces, dashes, and parentheses from phone number
+    const cleanPhone = this.contactInfo.phone.replace(/[\s\-\(\)]/g, '');
+    const message = encodeURIComponent('Hola, me gustaría agendar una cita médica.');
+    return `https://wa.me/${cleanPhone}?text=${message}`;
+  }
+
+  // Format phone for display
+  formatPhoneDisplay(phone: string): string {
+    // Return formatted phone number for display
+    return phone;
   }
 }

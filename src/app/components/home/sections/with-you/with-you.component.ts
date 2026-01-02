@@ -47,7 +47,7 @@ export class WithYouComponent implements OnInit {
 
   finalStats = {
     patients: 15000,
-    experience: 25,
+    experience: 5,
     success: 98
   };
 
@@ -124,7 +124,7 @@ export class WithYouComponent implements OnInit {
       category: 'Bienestar Integral',
       stats: {
         label: 'Años de Experiencia',
-        value: '25+'
+        value: '5+'
       }
     }
   ];

@@ -35,7 +35,7 @@ export class HealthCareComponent implements OnInit {
   // Estadísticas de impacto
   healthcareStatistics: HealthcareStatistic[] = [
     {
-      value: '25+',
+      value: '5+',
       label: 'Años de Experiencia',
       description: 'Décadas dedicadas a la salud cardiovascular',
       icon: 'calendar'

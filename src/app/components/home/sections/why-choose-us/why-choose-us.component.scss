@@ -1,0 +1,23 @@
+// Why Choose Us Component Styles
+.why-choose-us {
+  // Custom animations for hover effects
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Smooth transitions for interactive elements
+.group:hover .group-hover\:scale-110 {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+// Focus visible for keyboard navigation
+*:focus-visible {
+  outline: 2px solid #DC2626;
+  outline-offset: 2px;
+}

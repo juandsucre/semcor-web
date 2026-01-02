@@ -22,7 +22,7 @@ interface ContactInfo {
   address: string;
   city: string;
   phone: string;
-  emergency: string;
+  emergency?: string;
   email: string;
   schedule: string;
 }
@@ -44,24 +44,24 @@ interface Service {
 export class FooterComponent {
   @Input() companyName: string = 'Grupo SEMCOR';
   @Input() year: number = new Date().getFullYear();
-  @Input() logoSrc: string = 'assets/semcor-white.png';
+  @Input() logoSrc: string = 'assets/semcor.png';
 
   @Output() footerAction = new EventEmitter<{linkId: string, action: string}>();
   @Output() socialClick = new EventEmitter<{platform: string, url: string}>();
 
   contactInfo: ContactInfo = {
-    address: 'Calle 123 #45-67',
+    address: 'Calle 5 de Julio, entre calle Deleite y Avenida Libertador',
     city: 'Valle de la Pascua, Venezuela',
-    phone: '+58   123-4567',
-    emergency: '+58 (1) 911-SEMCOR',
+    phone: '+58 412 4521895',
+    // emergency: '+58 () 911-SEMCOR',
     email: 'contacto@semcor.com',
-    schedule: 'Lun - Vie: 7:00 AM - 7:00 PM'
+    schedule: 'Lunes a Viernes: 7:00 AM - 7:00 PM y Sábados: 8:00 AM - 2:00 PM'
   };
 
   services: Service[] = [
     {
       id: 'clinica',
-      name: 'SEMCOR Clínica',
+      name: 'SEMCOR Centro Clínico',
       description: 'Especialidades cardiovasculares',
       icon: '🏥'
     },

@@ -8,6 +8,7 @@ import { FeaturesComponent } from './sections/features/features.component';
 import { SemcorRunComponent } from './sections/semcor-run/semcor-run.component';
 import { ServicesComponent } from './sections/semcor-services/services.component';
 import { WithYouComponent } from './sections/with-you/with-you.component';
+import { WhyChooseUsComponent } from './sections/why-choose-us/why-choose-us.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import { WithYouComponent } from './sections/with-you/with-you.component';
     FeaturesComponent,
     SemcorRunComponent,
     ServicesComponent,
-    WithYouComponent
+    WithYouComponent,
+    WhyChooseUsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

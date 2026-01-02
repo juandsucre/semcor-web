@@ -21,7 +21,7 @@ export class HeroComponent {
   @Input() logoAlt: string = 'Logo SEMCOR';
   @Input() mainTitle: string = 'Especialistas en';
   @Input() highlightedTitle: string = 'Salud Cardiovascular';
-  @Input() subtitle: string = 'Más de 25 años brindando atención médica especializada con tecnología de vanguardia y el compromiso de cuidar tu corazón.';
+  @Input() subtitle: string = 'Más de 5 años brindando atención médica especializada con tecnología de vanguardia y el compromiso de cuidar tu corazón.';
 
   @Output() heroAction = new EventEmitter<{actionId: string, type: string}>();
 

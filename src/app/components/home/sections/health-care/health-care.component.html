@@ -1,270 +1,53 @@
-<!-- Health Care Section Profesional -->
-<section class="healthcare-section py-20 relative overflow-hidden">
-  
-  <!-- Efecto de línea cardiaca para toda la sección -->
-  <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
-    <div class="heartbeat-line-container-section">
-      <svg class="heartbeat-line-section" viewBox="0 0 1400 300" xmlns="http://www.w3.org/2000/svg">
-        <!-- Línea base del ECG -->
-        <path class="ecg-baseline-red-section" d="M0,150 L1400,150" stroke="#920033" stroke-width="1" fill="none" opacity="0.4"/>
-        
-        <!-- Patrón de ritmo cardíaco animado para toda la sección -->
-        <path class="ecg-heartbeat-red-section" 
-              d="M0,150 L100,150 L120,150 L130,120 L140,180 L150,80 L160,220 L170,150 L190,150 L250,150 L270,150 L280,120 L290,180 L300,80 L310,220 L320,150 L340,150 L400,150 L420,150 L430,120 L440,180 L450,80 L460,220 L470,150 L490,150 L550,150 L570,150 L580,120 L590,180 L600,80 L610,220 L620,150 L640,150 L700,150 L720,150 L730,120 L740,180 L750,80 L760,220 L770,150 L790,150 L850,150 L870,150 L880,120 L890,180 L900,80 L910,220 L920,150 L940,150 L1000,150 L1020,150 L1030,120 L1040,180 L1050,80 L1060,220 L1070,150 L1090,150 L1150,150 L1170,150 L1180,120 L1190,180 L1200,80 L1210,220 L1220,150 L1240,150 L1300,150 L1320,150 L1330,120 L1340,180 L1350,80 L1360,220 L1370,150 L1400,150" 
-              stroke="#920033" 
-              stroke-width="1.5" 
-              fill="none" 
-              opacity="0.6"/>
-        
-        <!-- Línea de pulso que se mueve -->
-        <circle class="ecg-pulse-red-section" cx="0" cy="150" r="2.5" fill="#920033" opacity="0.8"/>
-      </svg>
-    </div>
-  </div>
-  
-  <!-- Elementos decorativos de fondo muy sutiles -->
-  <div class="absolute inset-0 opacity-[0.02]">
-    <div class="absolute top-20 left-20 w-24 h-24">
-      <svg class="w-full h-full text-red-300" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-      </svg>
-    </div>
-    
-    <div class="absolute bottom-20 right-20 w-28 h-28">
-      <svg class="w-full h-full text-blue-300" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-      </svg>
-    </div>
-    
-    <!-- Patrón de puntos muy sutil -->
-    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(156, 163, 175, 0.1) 1px, transparent 0); background-size: 40px 40px;"></div>
-  </div>
+<!-- Health Care Section - Compacta y Profesional -->
+<section class="healthcare-section py-16 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-4">
 
-  <div class="container mx-auto px-4 relative z-10">
-    
-    <!-- Encabezado principal -->
-    <div class="text-center mb-16 relative">
-      
-      <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-50 to-blue-50 text-red-600 rounded-full text-sm font-semibold mb-6 border border-red-100">
+    <!-- Encabezado compacto -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold mb-4 border border-red-100">
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
         </svg>
         Compromiso con tu Bienestar
       </div>
-      
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 leading-tight relative">
-        
-        <!-- Efecto de línea cardiaca específicamente detrás del título -->
-        <div class="absolute inset-0 flex items-center justify-center opacity-[0.06] pointer-events-none">
-          <div class="heartbeat-line-container-title">
-            <svg class="heartbeat-line-title" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
-              <!-- Línea base del ECG -->
-              <path class="ecg-baseline-red-title" d="M0,100 L1200,100" stroke="#920033" stroke-width="1" fill="none" opacity="0.6"/>
-              
-              <!-- Patrón de ritmo cardíaco animado -->
-              <path class="ecg-heartbeat-red-title" 
-                    d="M0,100 L150,100 L170,100 L180,70 L190,130 L200,30 L210,170 L220,100 L240,100 L300,100 L320,100 L330,70 L340,130 L350,30 L360,170 L370,100 L390,100 L450,100 L470,100 L480,70 L490,130 L500,30 L510,170 L520,100 L540,100 L600,100 L620,100 L630,70 L640,130 L650,30 L660,170 L670,100 L690,100 L750,100 L770,100 L780,70 L790,130 L800,30 L810,170 L820,100 L840,100 L900,100 L920,100 L930,70 L940,130 L950,30 L960,170 L970,100 L990,100 L1050,100 L1070,100 L1080,70 L1090,130 L1100,30 L1110,170 L1120,100 L1140,100 L1200,100" 
-                    stroke="#920033" 
-                    stroke-width="2" 
-                    fill="none" 
-                    opacity="0.8"/>
-              
-              <!-- Línea de pulso que se mueve -->
-              <circle class="ecg-pulse-red-title" cx="0" cy="100" r="2" fill="#920033" opacity="1"/>
-            </svg>
-          </div>
-        </div>
-        
-        <span class="relative z-10">{{ mainTitle }}</span> 
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700 relative z-10">
-          {{ highlightedTitle }}
-        </span>
-      </h1>
-      
-      <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-8">
-        {{ subtitle }}
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+        {{ mainTitle }}
+        <span class="text-red-600">{{ highlightedTitle }}</span>
       </h2>
-      
-      <div class="max-w-4xl mx-auto">
-        <p class="text-xl text-gray-700 leading-relaxed mb-6">
-          {{ description }}
-        </p>
-        
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
-          <p class="text-lg text-gray-600 italic leading-relaxed">
-            "{{ mission }}"
-          </p>
-        </div>
-      </div>
+
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        {{ description }}
+      </p>
     </div>
 
-    <!-- Estadísticas de impacto -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-      <div 
-        *ngFor="let stat of healthcareStatistics; let i = index"
-        class="stat-card text-center group">
-        
-        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 relative overflow-hidden">
-          
-          <!-- Efecto de brillo -->
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-          
-          <!-- Icono -->
-          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-            
-            <svg *ngIf="stat.icon === 'calendar'" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Estadísticas compactas -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div
+        *ngFor="let stat of healthcareStatistics"
+        class="text-center group cursor-pointer"
+        tabindex="0">
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-red-300">
+          <!-- Icono compacto -->
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
+            <svg *ngIf="stat.icon === 'calendar'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
-            
-            <svg *ngIf="stat.icon === 'users'" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg *ngIf="stat.icon === 'users'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
             </svg>
-            
-            <svg *ngIf="stat.icon === 'heart'" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg *ngIf="stat.icon === 'heart'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>
-            
-            <svg *ngIf="stat.icon === 'clock'" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg *ngIf="stat.icon === 'clock'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          
-          <!-- Valor estadístico -->
-          <div class="text-4xl font-bold text-gray-900 mb-2 stat-value" 
-               [attr.data-value]="stat.value">
-            {{ stat.value }}
-          </div>
-          
+
+          <!-- Valor -->
+          <div class="text-3xl font-bold text-gray-900 mb-1">{{ stat.value }}</div>
           <!-- Label -->
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ stat.label }}</h3>
-          
-          <!-- Descripción -->
-          <p class="text-sm text-gray-600">{{ stat.description }}</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Valores institucionales -->
-    <div class="mb-16">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Valores</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Los principios que guían cada decisión y acción en nuestro compromiso con tu salud cardiovascular.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div 
-          *ngFor="let value of healthcareValues"
-          class="value-card cursor-pointer group"
-          [class.value-blue]="value.color === 'blue'"
-          [class.value-red]="value.color === 'red'"
-          [class.value-purple]="value.color === 'purple'"
-          [class.value-green]="value.color === 'green'"
-          (click)="onValueClick(value)">
-          
-          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 relative overflow-hidden">
-            
-            <!-- Decoración lateral -->
-            <div class="absolute left-0 top-0 bottom-0 w-1 value-accent-bg"></div>
-            
-            <!-- Contenido -->
-            <div class="flex items-start space-x-6">
-              
-              <!-- Icono -->
-              <div class="flex-shrink-0">
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center value-icon-bg group-hover:scale-110 transition-transform duration-300">
-                  
-                  <svg *ngIf="value.icon === 'award'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                  </svg>
-                  
-                  <svg *ngIf="value.icon === 'heart'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                  </svg>
-                  
-                  <svg *ngIf="value.icon === 'lightbulb'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                  </svg>
-                  
-                  <svg *ngIf="value.icon === 'shield'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-              </div>
-              
-              <!-- Contenido textual -->
-              <div class="flex-1">
-                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:value-title-color transition-colors duration-300">
-                  {{ value.title }}
-                </h3>
-                <p class="text-gray-700 leading-relaxed">
-                  {{ value.description }}
-                </p>
-              </div>
-              
-              <!-- Flecha indicadora -->
-              <div class="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg class="w-5 h-5 value-arrow-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Call to Action final -->
-    <div class="text-center">
-      <div class="bg-gradient-to-r from-red-600 via-red-700 to-red-800 rounded-3xl p-12 text-white relative overflow-hidden">
-        
-        <!-- Patrón decorativo de fondo -->
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            Tu Salud Cardiovascular es Nuestra Prioridad
-          </h2>
-          
-          <p class="text-xl text-red-100 leading-relaxed mb-8">
-            Cada latido cuenta, cada momento importa. Confía en nosotros para cuidar lo más importante: tu corazón y tu bienestar.
-          </p>
-          
-          <!-- Promesa de valor -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-3">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <h3 class="font-semibold mb-2">Atención Garantizada</h3>
-              <p class="text-sm text-red-200">Siempre disponibles cuando nos necesites</p>
-            </div>
-            
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-3">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                </svg>
-              </div>
-              <h3 class="font-semibold mb-2">Cuidado Personalizado</h3>
-              <p class="text-sm text-red-200">Tratamiento único para cada paciente</p>
-            </div>
-            
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-3">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <h3 class="font-semibold mb-2">Tecnología Avanzada</h3>
-              <p class="text-sm text-red-200">Equipos de última generación</p>
-            </div>
-          </div>
+          <div class="text-sm font-semibold text-gray-700">{{ stat.label }}</div>
         </div>
       </div>
     </div>

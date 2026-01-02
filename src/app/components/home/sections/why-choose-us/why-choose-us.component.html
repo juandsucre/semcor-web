@@ -1,0 +1,109 @@
+<!-- Why Choose Us Section - Professional & Informative -->
+<section id="why-choose-us" class="py-16 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-4">
+
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center bg-red-50 text-red-600 rounded-full px-4 py-2 mb-4 border border-red-100">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+        </svg>
+        <span class="font-semibold text-sm uppercase tracking-wide">Excelencia Médica</span>
+      </div>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        {{ sectionTitle }}
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        {{ sectionSubtitle }}
+      </p>
+    </div>
+
+    <!-- Main Reasons Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div
+        *ngFor="let reason of reasons"
+        class="group bg-white rounded-2xl p-6 border border-gray-200 hover:border-red-300 hover:shadow-xl transition-all duration-300 cursor-pointer"
+        tabindex="0"
+        (click)="onReasonClick(reason.id)"
+        (keydown.enter)="onReasonClick(reason.id)">
+
+        <!-- Icon -->
+        <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+          <!-- Award Icon -->
+          <svg *ngIf="reason.icon === 'award'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+          </svg>
+
+          <!-- Chip/Technology Icon -->
+          <svg *ngIf="reason.icon === 'chip'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+          </svg>
+
+          <!-- Users Icon -->
+          <svg *ngIf="reason.icon === 'users'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+          </svg>
+
+          <!-- Clock Icon -->
+          <svg *ngIf="reason.icon === 'clock'" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+
+        <!-- Content -->
+        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">
+          {{ reason.title }}
+        </h3>
+        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+          {{ reason.description }}
+        </p>
+
+        <!-- Stats Badge -->
+        <div *ngIf="reason.stats" class="inline-flex items-center bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+          <span class="text-lg mr-1">{{ reason.stats.value }}</span>
+          <span class="text-xs">{{ reason.stats.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          Certificaciones y Reconocimientos
+        </h3>
+        <p class="text-gray-600">
+          Nuestro compromiso con la excelencia médica está respaldado por certificaciones profesionales
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          *ngFor="let cert of certifications"
+          class="flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+
+          <!-- Certification Icon -->
+          <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+            <svg *ngIf="cert.icon === 'badge-check'" class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+            <svg *ngIf="cert.icon === 'shield-check'" class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+            <svg *ngIf="cert.icon === 'sparkles'" class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            </svg>
+          </div>
+
+          <!-- Certification Info -->
+          <div>
+            <h4 class="font-bold text-gray-900 mb-1">{{ cert.name }}</h4>
+            <p class="text-sm text-gray-600">{{ cert.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
